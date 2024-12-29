@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Repository Contribution Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Follow the steps below to clone the repository, create your branch, make changes, and push your updates to the remote repository.
 
-## Available Scripts
+## Steps to Contribute
 
-In the project directory, you can run:
+### 1. Clone the Repository
+Clone the repository's develop branch to your local system:
+```bash
+git clone https://github.com/Alpha-One-sae/club-history-page.git
+```
 
-### `npm start`
+### 2. Create a New Branch
+Create a new branch with your name:
+```bash
+git branch <your-branch-name>
+```
+Switch to the newly created branch:
+```bash
+git checkout <your-branch-name>
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Start Programming
+Begin making changes or adding new features in your local branch.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 4. Check Untracked Files
+Check the list of untracked files:
+```bash
+git status
+```
 
-### `npm test`
+### 5. Track All Files
+Track all the untracked files:
+```bash
+git add .
+```
+Check the status again to ensure all files are tracked (they should appear in green):
+```bash
+git status
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 6. Commit Your Changes
+Commit the changes with a suitable commit message:
+```bash
+git commit -m "<suitable-commit-message>"
+```
 
-### `npm run build`
+### 7. Pull Updates from Develop Branch
+Before pushing your changes, ensure your branch is up-to-date with the develop branch:
+```bash
+git pull origin develop
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 8. Push Your Changes
+Push your changes to the remote repository on your own branch:
+```bash
+git push origin <your-branch-name>
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Notes
+- Replace `<your-branch-name>` with a meaningful name for your branch.
+- Replace `<suitable-commit-message>` with a descriptive message summarizing your changes.
+- Always pull the latest changes from the develop branch before pushing your updates to avoid conflicts.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Thank you for contributing!
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
