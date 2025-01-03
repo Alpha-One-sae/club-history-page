@@ -4,7 +4,8 @@ const App = () => {
   return (
     <div className="App">
       Hi! I'm Vani from ECE 1st year
-    <div>
+      hi, I am Chanpreet , from CSE 1st year.
+    </div>
   )
 }
 
