@@ -2,11 +2,9 @@ import React from 'react'
 
 const App = () => {
   return (
+    <div className="App">
+      Hi! I'm Vani from ECE 1st year
     <div>
-      <h1>My details</h1>
-      <h2>Name: Johnny</h2>
-      <h2>From: Chandigarh</h2>
-    </div>
   )
 }
 
