@@ -12,9 +12,9 @@ export default function Navbar({ setSearchText }) {
       <h4 id='saeh'>SAE</h4>
       </div>
 
-      <div className='wiki'>
+      {/* <div className='wiki'>
         <h4 id='wikih'>WIKIPEDIA</h4>
-      </div>
+      </div> */}
 
       <div className="search-container">
         <Search className="search-icon" size={16} />

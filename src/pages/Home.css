@@ -1,108 +1,175 @@
-.homecon{
-    width: 100% ;
-    /* height: 100% ; */
+.homecon {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #000000;
+    background-color: black; /* Black background */
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh; /* Ensure it covers the full viewport height */
 }
 
-#draft{
+/* Graph Background */
+.graph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it stays behind the content */
+    background: 
+        linear-gradient(90deg, rgba(73, 139, 246, 0.2) 1px, transparent 2px), /* Light blue vertical lines */
+        linear-gradient(0deg, rgba(59, 131, 246, 0.276) 1px, transparent 2px); /* Light blue horizontal lines */
+    background-size: 24px 24px; /* Size of the graph grid */
+    animation: moveGraph 4s linear infinite;
+}
+
+@keyframes moveGraph {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 24px 24px; /* Move the grid diagonally */
+    }
+}
+
+#draft {
     margin-left: -400px;
-    color:#93C5FD;
+    color: #93C5FD;
     margin-bottom: 25px;
 }
 
-.teams{
-    color: #F5F5F5 ;
+.teams {
+    color: #F5F5F5;
     width: 65%;
-    /* height: 100%; */
     margin-right: 40px;
     margin-left: 20px;
 }
 
-ol li::marker{
-    color: #D3D3D3 ;
+ol li::marker {
+    color: #D3D3D3;
 }
 
-.saedesc{
-    color: #202122 ;
+.saedesc {
+    color: #202122;
     width: 35%;
-    /* height:100% ; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid gray ;
+    border: 1px solid gray;
     padding: 15px;
     background-color: #F8F9FA;
 }
+
 .saedesc {
-    align-self: flex-start; 
-    justify-content: flex-start; 
+    align-self: flex-start;
+    justify-content: flex-start;
 }
 
-ol > li > b{
+ol>li>b {
     color: #93C5FD;
     text-shadow: 0 0 3px #004da529;
 }
 
-.teams > p,li {
+.teams>p,
+li {
     font-size: 14px;
 }
 
-.box1{
-    display: flex ;
+.box1 {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: -20px;
 }
-.box1 > h5{
+
+.box1>h5 {
     text-align: center;
     font-size: 13px;
 }
-#nonp1, #chair1, #vchair1, #parent1{
-    color: #BF3C2C ;
+
+#nonp1,
+#chair1,
+#vchair1,
+#parent1 {
+    color: #BF3C2C;
 }
-#slink{
+
+#slink {
     text-decoration: none;
 }
 
-.twots{
+.twots {
     display: flex;
     width: 90%;
-    /* height: 45rem; */
     justify-content: center;
+    z-index: 100;
 }
 
-#saepi{
+#saepi {
     width: 130px;
-    height: 130px ;
+    height: 130px;
 }
 
-
-.box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11 {
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.box10,
+.box11 {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: -15px;
     gap: 15px;
 }
 
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11 {
-    border-bottom: 0.1px solid #D3D3D3; 
-    /* padding-bottom: 2px;  */
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.box10,
+.box11 {
+    border-bottom: 0.1px solid #D3D3D3;
 }
 
-.box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11{
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.box10,
+.box11 {
     padding-top: 4px;
 }
 
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11{
-    font-size: 12px ;
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.box10,
+.box11 {
+    font-size: 12px;
 }
 
 .box2 p:first-child,
@@ -114,11 +181,9 @@ ol > li > b{
 .box8 p:first-child,
 .box9 p:first-child,
 .box10 p:first-child,
-.box11 p:first-child 
-{
+.box11 p:first-child {
     text-align: left;
-    flex: 1; /* Ensures labels take proper space */
-    /* padding-left: 20px; */
+    flex: 1;
 }
 
 .box2 p:last-child,
@@ -128,40 +193,11 @@ ol > li > b{
 .box6 p:last-child,
 .box7 p:last-child,
 .box8 p:last-child,
-.box9 p:last-child 
+.box9 p:last-child,
 .box10 p:last-child,
-.box11 p:last-child 
-{
+.box11 p:last-child {
     text-align: right;
-    flex: 1; /* Ensures values align to the right */
-    /* padding-right: 20px; */
+    flex: 1;
 }
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -24,9 +24,11 @@ export default function Home({ searchText }) {
 
   return (
     <div className="homecon">
-      
+
+      <div className='graph'></div>
+
       <h3 id="draft">
-        {getHighlightedText('Draft: Society of Automotive Engineers, Panjab University', searchText)}
+        {getHighlightedText(`Society of Automotive Engineers, Panjab University`, searchText)}
       </h3>
 
       <div className="twots">
