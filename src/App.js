@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './App.css';
+import Navbar from './pages/Navbar';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import { Toaster } from 'react-hot-toast';
+import Reference from './pages/ReferencesPage.js';
+import Footer from './pages/footer.js';
+import History from './pages/HistoryPage.js';
 
-const App = () => {
+function App() {
+  const [searchText, setSearchText] = useState("");
+
   return (
     <div>
-      <h1>My details</h1>
-      <h2>Name: Johnny</h2>
-      <h2>From: Chandigarh</h2>
+      <Navbar setSearchText={setSearchText} />
+      <Home searchText={searchText} />
+      <History searchText={searchText} />
+      <Reference searchText={searchText} />
+      <Footer />
+      <Toaster />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

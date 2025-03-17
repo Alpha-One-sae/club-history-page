@@ -1,0 +1,273 @@
+.references-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 24px 32px;
+    line-height: 1.5;
+    background-color: #000000; 
+    color: #ffffff; 
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-size: 24px 24px;
+    background-position: 0 0;
+    border-bottom: 0.00001px solid rgb(71, 56, 56);
+    margin-top: -10px;
+  }
+
+  .graph {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    background: 
+        linear-gradient(90deg, rgba(73, 139, 246, 0.093) 1px, transparent 2px), 
+        linear-gradient(0deg, rgba(73, 139, 246, 0.093) 1px, transparent 2px); 
+    background-size: 24px 24px; 
+    animation: moveGraph 4s linear infinite;
+}
+
+@keyframes moveGraph {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 24px 24px;
+    }
+}
+  
+  /* body {
+    background-color: #000000; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%;
+    min-height: 100vh; 
+    background-image: 
+    linear-gradient(0deg, rgba(73, 139, 246, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 139, 246, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0;
+  } */
+  
+  .references-container * {
+    position: relative; 
+  }
+  
+  .references-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #4dabf7; 
+    padding-bottom: 8px;
+    /* margin-bottom: 4px; */
+  }
+  
+  .references-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff; 
+    text-shadow: 0 0 10px rgba(73, 139, 246, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .references-title:hover {
+    transform: translateX(5px);
+  }
+  
+  .collapse-button {
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #ffffff; 
+    text-align: left;
+  }
+  
+  .collapse-icon {
+    margin-right: 12px;
+    font-size: 0.85em;
+    color: #ffffff; 
+    transition: transform 0.3s ease;
+  }
+  
+  .collapse-button:hover .collapse-icon {
+    transform: rotate(180deg);
+  }
+
+  
+  .references-list {
+    padding-left: 40px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .references-list li {
+    margin-bottom: 8px;
+    position: relative;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #ffffff; 
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  .references-list{
+    margin-bottom: -10px;
+  }
+  
+  .references-list li:hover {
+    color: #ffffff; 
+  }
+  
+  .reference-link .link-text {
+    color: #ffffff; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative;
+    word-wrap: break-word;
+    display: inline-block;
+  }
+  
+  .reference-link:hover .link-text {
+    text-decoration: underline;
+    color: #3a9bfc;
+  }
+  
+  .reference-link:hover .caret {
+    color: inherit; 
+    text-decoration: none;
+  }
+  
+  
+  .date {
+    color: #aaaaaa; 
+    font-style: normal;
+  }
+  
+  
+  .references-list li .date {
+    color: #aaaaaa; 
+  }
+  
+  .caret {
+    font-size: 0.8em;
+    vertical-align: super;
+    color: #ffffff; 
+    margin-right: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  li:hover .caret {
+    color: #3366CC; 
+  }
+  
+  i {
+    font-style: italic;
+    color: #ffffff; 
+  }
+  
+  sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+    color: #ffffff; 
+    transition: color 0.2s ease;
+  }
+  
+  li:hover sup {
+    color: #3366CC; 
+  }
+  
+  
+  
+  /* @media (max-width: 768px) {
+    .references-container {
+      padding: 16px 20px;
+    }
+    
+    .references-title {
+      font-size: 1.6rem;
+    }
+    
+    .references-list {
+      padding-left: 24px;
+    }
+    
+    .references-list li {
+      font-size: 14px;
+    }
+  } */
+  
+  
+  .references-list li a {
+    color: #ffffff; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .references-list li a:hover {
+    color: #3366CC; 
+    text-decoration: underline;
+  }
+
+
+  .references-header {
+    position: relative;
+    z-index: 10;
+    background: #000; /* Ensure it's visible */
+    padding: 10px;
+}
+.collapse-button {
+    position: relative;
+    z-index: 20;
+    cursor: pointer;
+}
+
+
+.reference-link {
+  position: relative;
+  display: inline-block;
+  pointer-events: auto;  /* Ensure it can be clicked */
+  z-index: 10; /* Bring it to the front */
+}
+.reference-link .link-text {
+  pointer-events: none;  /* Prevents interference */
+}
+
+
+@media (max-width: 768px) {
+  .references-container {
+    padding: 10px;
+  }
+
+  .references-list {
+    padding-left: 20px;
+  }
+
+  .reference-link {
+    font-size: 14px;
+  }
+}
+

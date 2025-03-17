@@ -1,0 +1,93 @@
+.navcon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 0.00001px solid rgb(71, 56, 56);
+  }
+  
+  #saeimg {
+    width: 40px;
+    height: 40px;
+    margin-right: 2px;
+  }
+  
+  .saeih {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-left: 20px;
+    margin-right: 300px;
+  }
+  
+  #saeh {
+    color: #60a5fa;
+    font-size: larger;
+    text-shadow: 0 0 3px #60a5fa, 0 0 5px rgba(96, 165, 250, 0.5);
+    text-align: center;
+  }
+  
+  .wiki {
+    margin-right: 220px;
+  }
+  
+  #wikih {
+    color: #eaecef;
+    font-size: x-large;
+  }
+  
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container:focus-visible {
+    border: 2px solid rgb(86, 85, 85); 
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    color: gray;
+    z-index: 1; 
+  }
+  
+  #search {
+    width: 150px;
+    padding: 8px 8px 5px 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent; 
+    color: white; 
+    z-index: 2; 
+  }
+
+  @media (max-width: 768px) {
+    .navcon {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .saeih {
+      margin: 10px 0;
+    }
+  
+    .search-container {
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  
+    #search {
+      width: 80%;
+    }
+  }
