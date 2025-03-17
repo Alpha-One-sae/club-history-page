@@ -4,6 +4,12 @@ import './Navbar.css';
 import { Search } from 'lucide-react'
 
 export default function Navbar({ setSearchText }) {
+
+  const handleInputChange = (e) => {
+    console.log("Input value:", e.target.value); // Debugging
+    setSearchText(e.target.value); 
+  };
+
   return (
     <div className='navcon'>
       
@@ -22,7 +28,9 @@ export default function Navbar({ setSearchText }) {
           type="text" 
           id="search" 
           placeholder="Search" 
-          onChange={(e) => setSearchText(e.target.value)} 
+          onChange={handleInputChange} 
+          disabled={false}
+          readOnly={false}
         />
       </div>
 

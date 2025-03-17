@@ -6,6 +6,7 @@ import NotFound from './pages/NotFound';
 import { Toaster } from 'react-hot-toast';
 import Reference from './pages/ReferencesPage.js';
 import Footer from './pages/footer.js';
+import History from './pages/HistoryPage.js';
 
 function App() {
   const [searchText, setSearchText] = useState("");
@@ -14,7 +15,8 @@ function App() {
     <div>
       <Navbar setSearchText={setSearchText} />
       <Home searchText={searchText} />
-      <Reference />
+      <History searchText={searchText} />
+      <Reference searchText={searchText} />
       <Footer />
       <Toaster />
     </div>
